@@ -1,25 +1,33 @@
 import React from "react";
-import user from "../data/user";
 import Links from "./Links";
 
-
-function About(props) {
-  console.log(props);
+function About({bio, githubFn, linkedinFn}) {
+  // console.log(userPass, bio, githubFn, linkedinFn);
+  let isTrue = true;
+  console.log(bio);
   return (
     <div id="about">
       <h2>About Me</h2>
-      {props.bio}
-      {/* {isTrue === true ? props.bio : ""} */}
+      {Boolean(bio) === isTrue ? <p>{bio}</p> : <p>{null}</p>}
 
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
 
      <Links 
-     links = {props.links[0]}
+     github = {githubFn}
+     linkedin = {linkedinFn}
      /> 
     </div>
   );
 }
 
+// function bioCheck(bio) {
+//   // bio = 'Stanley'
+//   console.log(bio)
+//   let isTrue = true;
+//   bio === isTrue ? bio : null
+//   console.log(bioValue)
+//   return bioValue;
+// }
 // function ChildAbout(props) {
 //   const isTrue = props.bio;
 //   if (isTrue) {

@@ -18,8 +18,11 @@ function App() {
       />
       <About 
       // isTrue = {user.bio}
-      bio = {user.bio === true ? user.bio : ''}
-      links = {user.links}
+      // bio = {user.bio === true ? user.bio : null}
+      // userPass={user}
+      bio = {user.bio}
+      githubFn={user.links.github}
+      linkedinFn={user.links.linkedin}
       />
     </div>
   );
