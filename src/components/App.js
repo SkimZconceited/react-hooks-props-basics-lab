@@ -11,8 +11,16 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home 
+      name = {user.name}
+      color = {user.color}
+      city = {user.city}
+      />
+      <About 
+      // isTrue = {user.bio}
+      bio = {user.bio === true ? user.bio : ''}
+      links = {user.links}
+      />
     </div>
   );
 }
